@@ -66,4 +66,72 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetElement) {
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,
-                    behavior: '
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (nav.classList.contains('show')) {
+                    nav.classList.remove('show');
+                }
+            }
+        });
+    });
+    
+    // Glitch effect on hover for CTF cards
+    const writeupCards = document.querySelectorAll('.writeup-card');
+    
+    writeupCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('glitch-effect');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('glitch-effect');
+        });
+    });
+    
+    // Newsletter form validation
+    const newsletterForm = document.querySelector('.newsletter-form');
+    
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[type="email"]');
+            
+            if (emailInput.value && isValidEmail(emailInput.value)) {
+                // Simulate successful subscription
+                this.innerHTML = '<p class="success-message">Successfully subscribed! Thank you.</p>';
+            } else {
+                emailInput.style.borderColor = 'red';
+                setTimeout(() => {
+                    emailInput.style.borderColor = '';
+                }, 2000);
+            }
+        });
+    }
+    
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+    
+    // Platform hover effect
+    const platforms = document.querySelectorAll('.platform');
+    
+    platforms.forEach(platform => {
+        platform.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.05)';
+        });
+        
+        platform.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+        });
+    });
+    
+    // Add binary background effect to sections
+    const sections = document.querySelectorAll('section');
+    
+    sections.forEach(section => {
+        section.classList.add('binary-bg');
+    });
+});
