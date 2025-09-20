@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Writeups - CyberSec CTF Walkthroughs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">{CyberSec}</span>
+                <span class="blinking-cursor">_</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="writeups.html" class="nav-link active">Writeups</a></li>
+                    <li><a href="categories.html" class="nav-link">Categories</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header">
+                <h1>CTF Writeups</h1>
+                <p>Detailed solutions for cybersecurity challenges from various CTF platforms</p>
+            </div>
+
+            <!-- Writeups Filter -->
+            <div class="writeups-filter">
+                <div class="filter-group">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                        <option value="web">Web Exploitation</option>
+                        <option value="binary">Binary Exploitation</option>
+                        <option value="reverse">Reverse Engineering</option>
+                        <option value="crypto">Cryptography</option>
+                        <option value="forensics">Forensics</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="difficulty-filter">Difficulty:</label>
+                    <select id="difficulty-filter">
+                        <option value="all">All Difficulties</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="platform-filter">Platform:</label>
+                    <select id="platform-filter">
+                        <option value="all">All Platforms</option>
+                        <option value="htb">HackTheBox</option>
+                        <option value="ctftime">CTFtime</option>
+                        <option value="pico">picoCTF</option>
+                        <option value="thm">TryHackMe</option>
+                    </select>
+                </div>
+                <button id="apply-filters" class="btn primary">Apply Filters</button>
+            </div>
+
+            <!-- Writeups Grid -->
+            <div class="writeups-grid">
+                <div class="writeup-card" data-category="web" data-difficulty="easy" data-platform="htb">
+                    <div class="card-header">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="category">Web Exploitation</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>SQL Injection Mastery</h3>
+                        <p>Learn how to exploit SQL vulnerabilities in web applications with this step-by-step guide.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Sept 15, 2023</span>
+                        <a href="writeups/web-exploitation/sql-injection-mastery.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="writeup-card" data-category="reverse" data-difficulty="medium" data-platform="ctftime">
+                    <div class="card-header">
+                        <span class="difficulty medium">Medium</span>
+                        <span class="category">Reverse Engineering</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Cracking Custom Encryption</h3>
+                        <p>Reverse engineer a custom encryption algorithm and recover the original flag.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Sept 10, 2023</span>
+                        <a href="writeups/reverse-engineering/cracking-custom-encryption.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="writeup-card" data-category="binary" data-difficulty="hard" data-platform="htb">
+                    <div class="card-header">
+                        <span class="difficulty hard">Hard</span>
+                        <span class="category">Binary Exploitation</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Buffer Overflow Attack</h3>
+                        <p>Exploit a buffer overflow vulnerability to gain remote code execution on a server.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Sept 5, 2023</span>
+                        <a href="writeups/binary-exploitation/buffer-overflow-attack.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="writeup-card" data-category="crypto" data-difficulty="easy" data-platform="pico">
+                    <div class="card-header">
+                        <span class="difficulty easy">Easy</span>
+                        <span class="category">Cryptography</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Caesar Cipher Decryption</h3>
+                        <p>Learn how to break Caesar cipher encryption with frequency analysis.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Aug 28, 2023</span>
+                        <a href="writeups/cryptography/caesar-cipher-decryption.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="writeup-card" data-category="forensics" data-difficulty="medium" data-platform="thm">
+                    <div class="card-header">
+                        <span class="difficulty medium">Medium</span>
+                        <span class="category">Forensics</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Image Metadata Analysis</h3>
+                        <p>Extract hidden data from image metadata to find the flag.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Aug 22, 2023</span>
+                        <a href="writeups/forensics/image-metadata-analysis.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="writeup-card" data-category="web" data-difficulty="hard" data-platform="ctftime">
+                    <div class="card-header">
+                        <span class="difficulty hard">Hard</span>
+                        <span class="category">Web Exploitation</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>XSS to RCE</h3>
+                        <p>Chain multiple vulnerabilities to go from XSS to remote code execution.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="date">Aug 15, 2023</span>
+                        <a href="writeups/web-exploitation/xss-to-rce.html" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>{CyberSec}</h3>
+                    <p>Detailed CTF walkthroughs and cybersecurity resources.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="categories.html">Web Exploitation</a></li>
+                        <li><a href="categories.html">Binary Exploitation</a></li>
+                        <li><a href="categories.html">Reverse Engineering</a></li>
+                        <li><a href="categories.html">Cryptography</a></li>
+                        <li><a href="categories.html">Forensics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="writeups.html">Writeups</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CyberSec CTF Walkthroughs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/writeups.js"></script>
+</body>
+</html>
